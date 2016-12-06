@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Contact Us</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="description" content="Example page lay-out">
+		<meta name="keywords" content="layout, CWEB1010, Box elements, class example">
+		<meta name="author" content="Instructor C.Fulton">
+		<!--Google Font Implemented below-->
+		<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!--Internal Styling-->
+		<style>
+			body{
+				margin: 0;
+				background-image: url(images/wood.jpg);
+				background-repeat: repeat-x;
+				font-family: 'Questrial', sans-serif;
+				
+			}
+			#container{
+				width: 1000px;
+				margin: auto;
+			}
+			.headerstruct{
+
+				width: 100%;
+				height: 150px;
+				clear: both;
+				margin-top: 5em;
+			
+			}
+			.sidebar{
+
+				width: 350px;
+				height: 900px;
+				float: left;
+			
+			}
+			.maincontain{
+				width: 100%;
+				margin-top: 2em;
+				
+			
+			}
+			.main{
+
+				width: 605px;
+				height: 900px;
+				float: left;
+				margin-left: 2em;
+				
+			
+			}
+			#foot{
+				width:100%;
+				height: 150px;
+
+				clear: both;
+			
+			}
+			#logo{
+				margin: auto;
+				width: 50%;
+				font-size: 3em;
+				margin-top: 3em;
+				margin-bottom: 1em;
+			
+			}
+			.sidecontain{
+				width: 325px;
+				margin: auto;
+			}
+			.articlecontain{
+			    width: 580px;
+				margin: auto;
+			
+			
+			}
+			#articlebox1{
+				width: 560px;
+				height: 450px;
+				background-color: rgb(12, 100, 223);
+				background-image: url(run1.png);
+			
+			}
+		li{
+			    display: block;
+				float: left;
+
+				margin: auto;
+				width: 165px;
+				text-align: center;
+				padding: .3em;
+		}
+		#headerlist li:hover{
+			background-color: #840614;
+			font-weight: 900;
+			color: white;
+		
+		}
+		#headerlist{
+		
+			display: flex;		
+		}
+		a{
+			text-decoration: none;
+			color: #333;
+		
+		}
+		#minnimap{
+				margin: auto;
+				background-image: url('images/minnemap.png');
+				width: 265px;
+				height: 221px;
+				box-shadow:inset 1px 1px 40px 0 rgba(0,0,0,.45);
+				
+		}
+		#ardenmap{
+			margin: auto;
+			background-image: url(images/ahmap.png);
+			width: 265px;
+			height: 221px;
+			box-shadow:inset 1px 1px 40px 0 rgba(0,0,0,.45);
+		
+		}
+		#plus{  
+			   font-weight:900;
+			   color:white;
+			   font-size:96px;
+			   font-size: 32px;
+		   }
+		#overlay{  
+			   background:rgba(0,0,0,.75);
+			   text-align:center;
+			   padding:45px 0 87px 0;
+			   opacity:0;
+			   -webkit-transition: opacity .25s ease;
+		   }
+
+		#minnimap:hover #overlay {
+		   opacity:1;
+		}
+		#ardenmap:hover #overlay {
+		   opacity:1;
+		}
+
+
+		
+		#mapcontain{
+			display: flex;
+			width: 100%;
+			
+		}
+		#zip{
+			width: 195px;
+			height: 65px;
+			border: 6px solid #333;
+			font-size: 60px;
+			font-weight: 900;
+			margin-left: 20%;
+		
+		}
+		#ziplabel{
+			font-size: 45px;
+			font-weight: 900;
+		
+		}
+		h4{
+			font-size: 30px;
+			font-weight: 900;
+			text-align: center;
+		}
+		#displaycheck{
+			width: 300px;
+			background-color: rgba(128, 128, 128, 0.44);
+			color: gray;
+			height: 75px;
+			border-radius: 11px;
+			text-align: center;
+			font-size: 32px;
+			font-weight: 900;
+			margin-top: 12px;
+			padding-top: 12px;
+			
+
+		}
+		#appZip{
+			display: none;
+			margin: auto;
+			width: 320px;
+		}
+		
+		</style>
+	
+	
+	</head>
+	<body>
+		<div id="container">
+			<header class="headerstruct">
+				<div id="logo"><a href="index1.html">Delivery Zone Calculator </a></div>
+				<nav id="headernav">
+					<ul id="headerlist">
+						<li><a href="index1.html">Home</a></li>
+						<li><a href="aboutus.html">About Us</a></li>
+						<li style="background-color: #840614; font-weight: 900; color: white;"><a href="zone.html" style="color: white;">Delivery Zone Checker</a></li>
+						<li><a href="calc.html">Pizza Price Calculator</a></li>
+						<li><a href="contact.html">Contact Us</a></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="maincontain">
+				<aside class="sidebar">
+					<div class="sidecontain">
+						<!--<img src="http://placehold.it/325x350" alt="left side-bar advertisement">-->
+						<img src="" alt="left side bar advertisement" width="325" height="350">
+					</div>
+
+				</aside>
+				<article class="main">
+					<div class="articlecontain">
+						
+					</div>
+					<div class="articlecontain">
+						<h4>Please select a location you would like to check for delivery.</h4>
+						<div id="mapcontain">
+							
+							<div id="minnimap">
+								<div id="overlay">
+									<span id="plus">Minneapolis Location</span>
+								</div>
+							</div>
+							<div id="ardenmap">
+								<div id="overlay">
+									<span id="plus">Arden Hills Location</span>
+								</div>
+							</div>
+						
+						</div>
+						<div id="appZip">
+							<label id="ziplabel">Enter Zip-Code</label>
+							<input type="text" id="zip" onkeypress="checkZip(event)">
+							<div id="displaycheck">Un-Confirmed</div>
+						</div>
+					</div>
+				</article>
+			</div><!--end of maincontain-->
+			<footer id="foot">
+			
+			</footer>
+		</div><!--End of container-->
+		<script>
+			document.getElementById('minnimap').addEventListener('click', minniSelect, false);
+			document.getElementById('ardenmap').addEventListener('click', ardenSelect, false);
+				Function.prototype.called = false;		
+			function minniSelect(){
+				
+				document.getElementById("ardenmap").remove();
+				document.getElementById("appZip").style.display = "block";
+				minniSelect.called = true;
+			}
+			
+			function ardenSelect(){
+				document.getElementById("minnimap").remove();
+				document.getElementById("appZip").style.display = "block";
+				ardenSelect.called = true;
+			}
+			
+		
+		function checkZip(e) {
+			
+			if (e.keyCode == 13){
+			
+				if(minniSelect.called){
+					var minneDivZips = [55430,55431,55432];
+					var zip = validateZip()
+					var flag = false;
+					for(var z = 0; z < minneDivZips.length; z++){
+						if(zip == minneDivZips[z]){
+							document.getElementById('displaycheck').style.backgroundColor = "rgba(11, 128, 0, 0.57)";
+							document.getElementById('displaycheck').style.color = "white";
+							document.getElementById('displaycheck').innerHTML = "&#x2714; Confirmed Zip";
+							flag = true;
+						}
+					}
+					if(flag == false){
+					
+						document.getElementById('displaycheck').style.backgroundColor = "rgb(230, 50, 50)";
+						document.getElementById('displaycheck').style.color = "white";
+						document.getElementById('displaycheck').innerHTML = "&#9888; Un-Confirmed Zip";
+					}
+				}
+				if(ardenSelect.called){
+				
+					var ardenDivZips = [55425,55426,55427];
+					var zip = validateZip()
+					var flag = false;
+					for(var z = 0; z < ardenDivZips.length; z++){
+						if(zip == ardenDivZips[z]){
+							document.getElementById('displaycheck').style.backgroundColor = "rgba(11, 128, 0, 0.57)";
+							document.getElementById('displaycheck').style.color = "white";
+							document.getElementById('displaycheck').innerHTML = "&#x2714; Confirmed Zip";
+							flag = true;
+						}
+					}
+					if(flag == false){
+					
+						document.getElementById('displaycheck').style.backgroundColor = "rgb(230, 50, 50)";
+						document.getElementById('displaycheck').style.color = "white";
+						document.getElementById('displaycheck').innerHTML = "&#9888; Un-Confirmed Zip";
+					}
+				}
+			
+			}
+		}
+			function validateZip(){
+				var zipCode = document.getElementById('zip').value;
+				var zipLength = zipCode.length;
+				
+				if(zipLength != 5){
+				
+					alert("Zipcode should be 5 characters long");
+				}
+				return zipCode;
+			}
+
+			
+			
+		
+		</script>
+	</body>
+</html>

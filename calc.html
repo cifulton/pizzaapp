@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Calculate Pizza Form</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="description" content="Example page lay-out">
+		<meta name="keywords" content="layout, CWEB1010, Box elements, class example">
+		<meta name="author" content="Instructor C.Fulton">
+		<!--Google Font Implemented below-->
+		<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!--Internal Styling-->
+		<style>
+			body{
+				margin: 0;
+				background-image: url(images/wood.jpg);
+				background-repeat: repeat-x;
+				font-family: 'Questrial', sans-serif;
+				
+			}
+			#container{
+				width: 1000px;
+				margin: auto;
+			}
+			.headerstruct{
+
+				width: 100%;
+				height: 150px;
+				clear: both;
+				margin-top: 5em;
+			
+			}
+			.sidebar{
+
+				width: 350px;
+				height: 900px;
+				float: left;
+			
+			}
+			.maincontain{
+				width: 100%;
+				margin-top: 2em;
+				
+			
+			}
+			.main{
+
+				width: 605px;
+				height: 900px;
+				float: left;
+				margin-left: 2em;
+				
+			
+			}
+			#foot{
+				width:100%;
+				height: 150px;
+
+				clear: both;
+			
+			}
+			#logo{
+				margin: auto;
+				width: 50%;
+				font-size: 3em;
+				margin-top: 3em;
+				margin-bottom: 1em;
+			
+			}
+			.sidecontain{
+				width: 325px;
+				margin: auto;
+			}
+			.articlecontain{
+			    width: 580px;
+				margin: auto;
+			
+			
+			}
+			#articlebox1{
+				width: 560px;
+				height: 450px;
+				background-color: rgb(12, 100, 223);
+				background-image: url(run1.png);
+			
+			}
+		li{
+			    display: block;
+				float: left;
+
+				margin: auto;
+				width: 165px;
+				text-align: center;
+				padding: .3em;
+		}
+		#headerlist li:hover{
+			background-color: #840614;
+			font-weight: 900;
+			color: white;
+		
+		}
+		#headerlist{
+		
+			display: flex;		
+		}
+		a{
+			text-decoration: none;
+			color: #333;
+		
+		}
+		
+		</style>
+	
+	
+	</head>
+	<body>
+		<div id="container">
+			<header class="headerstruct">
+				<div id="logo"><a href="index1.html">Pizza Delivery Order Form </a></div>
+				<nav id="headernav">
+					<ul id="headerlist">
+						<li><a href="index1.html">Home</a></li>
+						<li><a href="aboutus.html">About Us</a></li>
+						<li><a href="zone.html">Delivery Zone Checker</a></li>
+						<li style="background-color: #840614; font-weight: 900; color: white;"><a href="calc.html" style="color: white;">Pizza Price Calculator</a></li>
+						<li><a href="contact.html">Contact Us</a></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="maincontain">
+				<aside class="sidebar">
+					<div class="sidecontain">
+						<!--<img src="http://placehold.it/325x350" alt="left side-bar advertisement">-->
+						<img src="" alt="left side bar advertisement" width="325" height="350">
+					</div>
+
+				</aside>
+				<article class="main">
+					<div class="articlecontain">
+						
+					</div>
+					<div class="articlecontain">
+						<form method="post" enctype="text/plain" action="">
+							<label>Please enter a name for the order:</label>
+							<input type="text" name="First Name" id="ordername" placeholder="Ex. John" class="form-control input-lg">
+							<br>
+							<label>Enter phone number:</label>
+							<input type="tel" name="Phone" id="phone" placeholder="(708)666-9999" class="form-control input-lg">
+							<br>
+							<label>Please select from one of our specialty pizza's</label>
+							<select class="form-control" id="pizzatype">
+							  <option value="10.99">Supreme Deluxe</option>
+							  <option value="9.99">Meat Lovers</option>
+							  <option value="7.99">Veggie Delight</option>
+							  <option value="8.99">PineApple Express</option>
+							  <option value="12.00">Buffalo Chicken pie</option>
+							</select>
+							<br>
+							<label> Please select whether you would like a small, medium, large or party size pizza</label>
+							<label class="radio-inline">
+							  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="2"> small
+							</label>
+							<label class="radio-inline">
+							  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="4"> medium
+							</label>
+							<label class="radio-inline">
+							  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="6"> large
+							</label>
+							<!--<label class="radio-inline">
+							  <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4"> party size
+							</label>-->
+							<br>
+							<label>Please enter special delivery instructions</label><br>
+							<textarea name="Message" col="40" rows="6" class="form-control input-lg">
+							
+							</textarea>
+							<br>
+							<input type="submit" class="btn btn-primary" onclick="calcPizza()"><input type="reset" value="Reset" class="btn btn-danger">
+						</form>
+						<div id="output"></div>
+					</div>
+				</article>
+			</div><!--end of maincontain-->
+			<footer id="foot">
+			
+			</footer>
+			<script>
+			
+			// Create our number formatter.
+			var formatter = new Intl.NumberFormat('en-US', {
+			  style: 'currency',
+			  currency: 'USD',
+			  minimumFractionDigits: 2,
+			});
+
+		
+			
+			
+			function calcPizza(){
+			var orderName = document.getElementById("ordername").value;
+			var phone = document.getElementById("phone").value;
+			var pizzaType = document.getElementById("pizzatype").value;
+			var totalCost, totalCostDelivery;
+			var deliveryCharge = 4.99;
+			
+			
+			
+			var pizzaSize;
+			if(document.getElementById("inlineRadio1").checked){
+				pizzaSize = document.getElementById("inlineRadio1").value;
+			}else if((document.getElementById("inlineRadio1").checked)){
+			
+				pizzaSize=document.getElementById("inlineRadio2").value;
+			}else{
+				pizzaSize=document.getElementById("inlineRadio3").value;
+			}
+			
+			//window.alert("Order Name: " + orderName + " Phone: " + phone + "Pizza Type:" + pizzaType + "Pizza Size: " + formatter.format(pizzaSize));
+						totalCost = pizzaType + pizzaSize;
+			totalCostDelivery = totalCost + deliveryCharge;
+			
+			document.getElementById('output').innerHTML = orderName + " The total cost of your pizza  is " + totalCost;
+			event.preventDefault();
+			}
+
+			
+			
+			
+			
+			
+			
+			</script>
+		</div><!--End of container-->
+	</body>
+</html>
